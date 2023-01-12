@@ -1,0 +1,85 @@
+
+    <header>
+<nav>
+<div class="logo">P_Blog</div>
+
+<ul class="menu-wrapper">
+<li><a href="#">Login</a></li>
+<li><a href="/Signup">Signup</a></li>
+</ul>
+<div class="user_pic">
+    <img src= "{{url}}"/>
+</div>
+
+<div class="modal">
+<div class="sub-menu-wrapper">
+<div class="sub-menu">
+<div class="user-info">
+    <img class="userPic" src= "{{url}}"/>
+<h3>Madhav Pandey</h3>
+</div>
+<hr>
+
+<a href="/edit-profile" class="sub-menu-link">
+<img src="images/profile.png" alt="user pic">
+<p>Edit Profile</p>
+<span>></span>
+</a>
+
+<a href="/upload" class="sub-menu-link">
+<img src="images/profile.png" alt="user pic">
+<p>View Profile</p>
+<span>></span>
+</a>
+
+<a href="#" class="sub-menu-link">
+<img src="images/logout.png" alt="user pic">
+<p>Logout</p>
+<span>></span>
+</a> 
+
+</div>
+
+
+</div>
+
+</div>
+
+</nav>
+    <script defer>
+let trigerBtn = document.querySelector(".user_pic");
+let subMenu = document.querySelector(".sub-menu-wrapper")
+let subMenuLinks = document.querySelectorAll(".sub-menu-link");
+let modal = document.querySelector(".modal");
+
+const showMenu = ()=>{  
+modal.classList.toggle("modalOn");
+subMenu.classList.toggle("open");
+
+}
+
+
+
+window.addEventListener("click",(e)=>{
+    if(e.target===modal){
+      modal.classList.toggle("modalOn");
+subMenu.classList.toggle("open");  
+    }else
+    return
+})
+ 
+trigerBtn.addEventListener("click",showMenu)
+
+subMenuLinks.forEach(link=>{
+    link.addEventListener("click",showMenu);
+})
+
+
+
+
+
+
+
+    </script>
+
+    </header>

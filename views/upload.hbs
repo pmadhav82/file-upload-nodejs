@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{>nav}}
+    <div>
+        <h2>User profile picture</h2>
+        <img  class = "user-picture"src="{{url}}" alt=""  width="350" height="350"/>
+    <div class="action">
+        <form action="/deletePic" method="POST">
+        <button type="submit">Delete</button>
+        </form>
+        <a class="changeBtn" href="/edit-profile">Change pic</a>
+    </div>
+    </div>
+</body>
+</html>
