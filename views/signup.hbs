@@ -1,27 +1,27 @@
 {{> nav}}
-<div class="singup-box">
-    <h2>Sing Up</h2>  
-<form action="/singup" method="POST">
-<div class="user-input">
-<input type="text" name="name"  value = "{{name}}"required>
-<label > Name </label>
+<section class="container">
+
+<h2>Sign Up Form</h2>
+<form action="/form" class="form">
+
+<div class="input-group">
+<label for=""><span>Email</span></label>
+<input type="text" name="" id="" >
+
 </div>
 
-<div class="user-input">
-<input type="email" name="email" value="{{email}}" required>
-<label > Email </label>
+<div class="input-group">
+<label for=""> <span>Password</span></label>
+<input type="password" name="" id="">
+
 </div>
 
-<div class="user-input">
-<input type="password" name="password"  required>
-<label > Password </label>
-</div>
 
-<div class="user-input">
-<input type="file" name="profile" accept="image/png, image/jpeg" required>
-<label > Profile Picture </label>
-</div>
- <input type="submit" value="Sing Up">
+<button>Sign Up</button>
+
 </form>
+<p class="newUser">
+    Already have an account? <span>Login</span>
+</p>
 
-</div>
+</section>

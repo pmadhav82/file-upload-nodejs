@@ -32,9 +32,13 @@ let themeName = document.querySelector(".themeName")
 
 
 // check theme mode in local storage and set the theme accordingly
-if(localStorage.getItem("mode")=== "dark"){
-    document.body.classList.add("dark-mode");
-    themeName.innerHTML = "Light mode";
+
+window.onload = ()=>{
+    if(localStorage.getItem("mode")=== "dark"){
+        document.body.classList.add("dark-mode");
+        themeName.innerHTML = "Light mode";
+    }
+    
 }
 
 
