@@ -28,9 +28,7 @@ form {
     form > input[type=file] {
     position: relative;
     }
-    form>input[type="file"]{
-        z-index: -1;
-    }
+    
     form > input[type=file]:before {
     content: 'Choose a Photo';
     position: absolute;

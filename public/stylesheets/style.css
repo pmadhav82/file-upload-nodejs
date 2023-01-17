@@ -3,6 +3,8 @@
   --primary-text-color: #222;
   --secondary-text-color: #444444;
   --nav-bg-color:#f5f5f5;
+  --logo-color: #d54d7b;
+  --transition-value:0.5s;
 }
 
 
@@ -19,6 +21,7 @@ body {
   
   background: var(--bg-color);
   color: var(--primary-text-color);
+  transition: var(--transition-value);
 }
 
 .dark-mode{
@@ -26,6 +29,8 @@ body {
   --primary-text-color: #fff;
   --secondary-text-color: #f5f5f5;
 --nav-bg-color:#000;
+--logo-color: #d54d7b;
+--transition-value:0.5s;
 }
 #toggleBtn{
   cursor: pointer;
@@ -37,7 +42,7 @@ body {
 }
 
 .logo {
-  color:var(--secondary-text-color);
+  color:var(--logo-color);
   font-family: "Great Vibes", cursive;
   font-size: 30px;
   font-weight: normal;
@@ -77,11 +82,12 @@ nav ul li a{
   text-decoration: none;
   background: var(--bg-color);
   display: inline-block;
-  margin: 4px 2px;
-  padding: 10px 30px;
+  margin: 10px 0;
+  padding: 10px 18px;
   text-align: center;
-  font-size: 16px;
+  border-radius: 5px;
 }
+
  .modal{
   position: fixed;
   top: 0%;
@@ -99,11 +105,10 @@ nav ul li a{
   width: 20rem;
   position: absolute;
   top:15%;
-z-index: 1;
   right: 10%;
   max-height: 0px;
   overflow: hidden;
-  transition: 0.5s
+  transition: var(--transition-value);
 }
 .sub-menu-wrapper.open{
 
