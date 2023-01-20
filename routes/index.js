@@ -13,7 +13,11 @@ router.get("/api",(req,res)=>{
 } )
 
 
-
+ router.get("/login", (req,res)=>{
+  res.render("textbox",{
+    url : "http://localhost:3000/madhavPic..jpg"
+  })
+ })
 router.get("/signup", (req,res)=>{
   res.render("signup",{
     url : "http://localhost:3000/madhavPic..jpg"
